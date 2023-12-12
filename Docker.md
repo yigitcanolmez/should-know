@@ -13,3 +13,12 @@ docker run -d -p 15672:15672 -p 5672:5672 --name RabbitMQContainer rabbitmq:3.8.
 
 ************************************************************************
 
+# MsSql
+
+MacOS ile çalışmaktadır. 
+
+docker pull mcr.microsoft.com/azure-sql-edge
+
+docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Password12*" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
+
+************************************************************************
